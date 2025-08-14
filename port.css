@@ -1,0 +1,207 @@
+.gallery-area img {
+    margin-bottom: 10px;
+    width: 100%;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  .container.fullwidth {
+    width: 100%;
+  }
+  
+  .container.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .hero-section {
+    font-family: 'Playfair Display', serif; /* Elegant font */
+    background: url('assets/lux.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff; /* Change the color to white for better readability */
+    padding: 0 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a shadow for enhanced visibility */
+  }
+  /* Apply the fade-in animation to the navbar */
+  .navbar {
+    animation: fadeIn 0.5s ease forwards; /* Fade-in effect */
+  }
+  
+  /* Hover effect for navbar links */
+  .nav-link {
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .nav-link:hover {
+    color: #ffc107; /* Change to a brighter color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+  }
+  
+  
+  .hero-title {
+    font-family: 'Playfair Display', serif; /* Elegant font for the heading */
+    color: #0077b6; /* Rich blue color */
+    font-size: 4rem; /* Prominent size for the title */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    margin-bottom: 20px;
+  }
+  
+  .hero-subtitle {
+    font-family: 'Roboto', sans-serif; /* Clean font for subheading */
+    color: #555555; /* Muted dark gray color */
+    font-size: 1.5rem;
+    margin-top: 10px;
+    line-height: 1.8;
+  }
+  
+  .hero-section .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .hero-section .btn:hover {
+    background-color: #005f99;
+  }
+  /* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Section Styling */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Headings */
+h2 {
+  font-size: 2rem;
+  color: #0077b6;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* About Section */
+#about {
+  background-color: #f4f4f4;
+  padding: 60px 20px;
+}
+
+/* Collections Section */
+#collections ul {
+  list-style: none;
+  padding: 0;
+}
+
+#collections li {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+/* Why Choose Us Section */
+#why-us ul {
+  list-style: none;
+  padding: 0;
+}
+
+#why-us li {
+  font-size: 1.2rem;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Testimonials Section */
+#testimonials {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Testimonial Container */
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Testimonial Box */
+.testimonial {
+  max-width: 300px;
+  background: white;
+  padding: 20px;
+  border-left: 5px solid #0077b6;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;  /* Initially hidden */
+  transform: translateX(100px); /* Start from right */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Show Testimonial */
+.testimonial.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade Out (when going out of view) */
+.testimonial.fade-left {
+  opacity: 0;
+  transform: translateX(-100px); /* Move to the left */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+
+/* Contact Section */
+#contact {
+  background-color: #333;
+  color: white;
+  padding: 60px 20px;
+}
+
+#contact a {
+  color: #0077b6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+  /* Fade-in animation for the navbar */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply the fade-in animation to the navbar */
+  .navbar {
+    animation:cubic-bezier(0.165, 0.84, 0.44, 1)/* Fade-in effect */
+  }
+  
+  /* Hover effect for navbar links */
+  .nav-link {
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .nav-link:hover {
+    color: #ffc107; /* Change to a brighter color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+  }
+  

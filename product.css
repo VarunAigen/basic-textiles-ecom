@@ -1,0 +1,223 @@
+/* General Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product_section {
+    background: linear-gradient(135deg, #f0f0f0, #dcdcdc);
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.product_taital {
+    font-size: 40px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product_text {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+/* Product Boxes */
+.product_section_2 {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 40px;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.product_box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.product_box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.product_section_3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 40px;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.product_box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.product_box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.bursh_text {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.lorem_text {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.image_1 {
+    width: 100%;
+    height: 150px;
+    object-fit: fill;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.product_box:hover .image_1 {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.btn_main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.buy_bt ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.buy_bt ul li {
+    display: inline-block;
+}
+
+.buy_bt ul li a {
+    display: inline-block;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #ff6600, #ff3300);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 14px;
+}
+
+.buy_bt ul li a:hover {
+    background: linear-gradient(135deg, #ff4500, #cc2900);
+    transform: scale(1.05);
+}
+
+.price_text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    margin-top: 10px;
+}
+
+/* See More Button */
+.seemore_bt {
+    margin-top: 40px;
+}
+
+.seemore_bt a {
+    display: inline-block;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.seemore_bt a:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: scale(1.05);
+}
+
+/* Gallery Section */
+.img-pop-home img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-pop-home img:hover {
+    transform: scale(1.05);
+}
+
+.row.g-2 {
+    gap: 10px;
+}
+
+.mt-9 {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .product_section {
+        padding: 50px 15px;
+    }
+    .product_section_2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product_taital {
+        font-size: 34px;
+    }
+    .product_text {
+        font-size: 17px;
+    }
+    .product_section_2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .image_1 {
+        height: 180px;
+    }
+    .buy_bt ul {
+        flex-direction: column;
+    }
+    .buy_bt ul li {
+        margin-bottom: 8px;
+    }
+}

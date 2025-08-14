@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Threads of Elegance</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!--bootstarp-->
+   
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" src="" class="img-fluid mb-3" alt="Product Image">
+          <h5 id="modalTitle"></h5>
+          <p id="modalDescription"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Threads of Elegance</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.aspx">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+       
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+
+  <!-- Hero Section -->
+  <header id="home" class="hero-section text-center text-white d-flex align-items-center" 
+          style="background-image: url('assets/ganesh.jpg'); background-size: cover; background-position: center; height: 100vh;">
+    <div class="container">
+      <h1 class="display-4">Grace in Every Thread</h1>
+      <p class="lead">Explore our exclusive collection of sustainable and luxurious textiles.</p>
+      <a href="#products" class="btn btn-primary">Shop Now</a>
+        <br>
+       <a href="login.aspx"  class="btn btn-primary">Login </a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about-section py-5 bg-light">
+    <div class="container text-center">
+      <h2>About Us</h2>
+      <p class="mt-3">At Threads of Elegance, we bring you premium textiles crafted with precision and sustainability in mind.</p>
+    </div>
+  </section>
+
+<!-- Products Section -->
+<section id="products" class="products-section py-5">
+  <div class="container">
+    <h2 class="text-center">Our Products</h2>
+
+  
+
+    <div class="row mt-4" id="product-container">
+      <div class="col-md-4 product-card">
+        <div class="card">
+          <img src="assets/maroon-colour-panjakejam-readymade-golden-zari-dhoti.jpg" class="card-img-top" alt="Fabric 1">
+          <div class="card-body">
+            <h5 class="card-title"> Panjakejam Golden Border Dhoti </h5>
+            <p class="card-text"> Silk Embroidered, Striped, Solid Men Dhoti.</p>
+            <a href="#" class="btn btn-primary view-more-btn" 
+            data-title="Panjakejam Readymade Golden Zari Border Dhoti" 
+            data-description="Featuring an exquisite blend of different solid patterns, this men's readymade dhoti is complemented by intricate zari work on the border. Designed to provide a traditional look, the dhoti brings together classic motifs that resonate with elegance and sophistication. The refined combination of embroidery and stripe details enhances its timeless appeal, making it a suitable addition to any wardrobe that celebrates heritage and style." 
+            data-image="assets/maroon-colour-panjakejam-readymade-golden-zari-dhoti.jpg"
+            data-price="PRICE : ₹499">
+            View More
+         </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product Details Modal (same as before) -->
+<div id="product-details" class="modal-container">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <div class="product-layout">
+      <h3 id="product-title"></h3>
+      <img id="product-image" src="" alt="Product Image">
+      <div class="product-info">
+        <p id="product-description"></p>
+        <p id="product-price"></p>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="col-md-4 product-card">
+        <div class="card">
+          <img src="assets/rameshwaram-fabrics.jpg" class="card-img-top" alt="rameshwaram-fabrics">
+          <div class="card-body">
+            <h5 class="card-title">Rameshwaram Dhoti</h5>
+            <p class="card-text">Pattern :
+              Embroidered, Striped, Solid</p>
+            <a href="#" class="btn btn-primary view-more-btn" 
+               data-title="peacock border rameshwaram fabrics" 
+               data-description="Crafted with precision and attention to detail, this dhoti is designed to effortlessly enhance your ethnic ensemble when paired with a kurta. Embrace the timeless elegance of Indian fashion with our thoughtfully curated combination. Key Features: Premium Fabric: Our readymade dhoti is fashioned from high-quality, breathable fabric that ensures comfort throughout the day.." 
+               data-image="assets/rameshwaram-fabrics.jpg"
+               data-price="PRICE : ₹599">
+               View More
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product Details Modal (same as before) -->
+<div id="product-details" class="modal-container">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <div class="product-layout">
+      <h3 id="product-title"></h3>
+      <img id="product-image" src="" alt="Product Image">
+      <div class="product-info">
+        <p id="product-description"></p>
+        <p id="product-price"></p>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="col-md-4 product-card">
+        <div class="card">
+          <img src="assets/mens-black-colour-panjakejam-readymade-golden-zari-dhoti.jpg" class="card-img-top" alt="mens-black-colour-panjakejam-readymade-golden-zari-dhoti">
+          <div class="card-body">
+            <h5 class="card-title">Panjakejam golden zari dhoti</h5>
+            <p class="card-text">Pattern :
+              Embroidered, Striped, Solid</p>
+            <a href="#" class="btn btn-primary view-more-btn" 
+               data-title="mens-black-colour-panjakejam-readymade-golden-zari-dhoti" 
+               data-description="
+               SUPER FINE FABRIC, Perfect Companion for a Man to feel good and comfortable. These Dhoties have a wonderful, soft feel and comes in natural colours. Made out of 100% pure ." 
+               data-image="assets/mens-black-colour-panjakejam-readymade-golden-zari-dhoti.jpg"
+               data-price="PRICE : ₹600">
+               View More
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Add more products here as necessary -->
+    </div>
+  </div>
+</section>
+
+<!-- Product Details Modal (same as before) -->
+<div id="product-details" class="modal-container">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <div class="product-layout">
+      <h3 id="product-title"></h3>
+      <img id="product-image" src="" alt="Product Image">
+      <div class="product-info">
+        <p id="product-description"></p>
+        <p id="product-price"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section py-5 bg-dark text-white">
+    <div class="container text-center">
+      <h2>Contact Us</h2>
+      <p class="mt-3">We'd love to hear from you! Feel free to reach out for any inquiries or collaborations.</p>
+      <form class="mt-4">
+        <div class="row">
+          <div class="col-md-6">
+            <input type="text" class="form-control mb-3" placeholder="Your Name">
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control mb-3" placeholder="Your Email">
+          </div>
+        </div>
+        <textarea class="form-control mb-3" rows="4" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+<footer class="footer">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-4 col-md-6">
+            <h3 class="footer_title">Threads of Elegance</h3>
+            <p class="footer_text">Grace in Every Thread</p>
+         </div>
+         <div class="col-lg-4 col-md-6">
+            <h3 class="footer_title">Contact Us</h3>
+            <p class="footer_text">📞 <a href="tel:+919876543210">+91 98765 43210</a></p>
+            <p class="footer_text">📍 <a href="https://maps.app.goo.gl/Yf5waDfdXymtCfna9" target="_blank">Find us on Google Maps</a></p>
+         </div>
+         <div class="col-lg-4 col-md-12">
+            <h3 class="footer_title">Follow Us</h3>
+            <div class="social_icons">
+               <a href="https://www.instagram.com/elampillai_unique_saree/" target="_blank"><i class="fab fa-instagram"></i></a><br />
+               <a href="https://www.facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i></a>
+               <a href="https://www.justdial.com/jdmart/Salem/Karthi-Silks-Spmm-Hospital-Opp-Ammapettai/0427PX427-X427-181025182655-S5W3_BZDET/catalogue" target="_blank"><i class="fas fa-phone"></i></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white py-3">
+    <div class="container text-center">
+      <p>&copy; 2025 Threads of Elegance. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+ 
+<!-- Bootstrap JS (if using Bootstrap) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="more.js"></script>
+<!-- Your custom JavaScript file -->
+<script src="script.js"></script>
+ 
+</body>
+</html>

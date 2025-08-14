@@ -1,0 +1,378 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&family=Ultra&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #0077b6;
+}
+/* Fade-in animation for the navbar */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .container.fullwidth {
+    width: 100%;
+  }
+  
+  .container.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Apply the fade-in animation to the navbar */
+  .navbar {
+    animation: fadeIn 0.5s ease forwards; /* Fade-in effect */
+  }
+  
+  /* Hover effect for navbar links */
+  .nav-link {
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .nav-link:hover {
+    color: #ffc107; /* Change to a brighter color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+  }
+/* Hero Section */
+
+.hero-section {
+  font-family: 'Playfair Display', serif; /* Elegant font */
+  
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fbff00; /* Change the color to white for better readability */
+  padding: 0 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a shadow for enhanced visibility */
+}
+
+
+.hero-title {
+  font-family: 'Playfair Display', serif; /* Elegant font for the heading */
+  color: #00a6ff; /* Rich blue color */
+  font-size: 4rem; /* Prominent size for the title */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-family: 'Roboto', sans-serif; /* Clean font for subheading */
+  color: #555555; /* Muted dark gray color */
+  font-size: 1.5rem;
+  margin-top: 10px;
+  line-height: 1.8;
+}
+
+.hero-section .btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero-section .btn:hover {
+  background-color: #005f99;
+}
+
+  
+/* About Section */
+.about-section {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.about-section p {
+  max-width: 600px;
+  margin: 20px auto 0;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Products Section */
+.products-section {
+  background-color: white;
+  padding: 100px 20px;
+}
+
+.products-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.products-section .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px;
+}
+
+.products-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.products-section .card img {
+  height: 350px;
+  object-fit: cover;
+}
+
+.products-section .card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #0077b6;
+}
+
+.products-section .card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.products-section .btn {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.products-section .btn:hover {
+  background-color: #005f99;
+}
+/* Modal Container */
+/* Modal Overlay */
+.modal-container {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* On top of everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* Solid black background (no transparency) */
+    border-radius: 10px; /* Border-radius for rounded corners */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #1a1a1a; /* Dark background for the content */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    border: 5px solid #333; /* Dark border around the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: right corner ;
+    top: 0px;
+    right: 40px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    color: #0077b6;
+  }
+  /* Product Image */
+  #product-image {
+    max-width: 75%;
+    height: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Space between image and content */
+  }
+  .product-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  /* Product Title */
+  #product-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #d6e812;
+   text-align: center;
+   animation-name: initial;
+    font-weight: normal;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    max-width: 200%; 
+    }
+    
+    /* Product Description */
+  #product-description {
+    color: #ffffffe0;
+    font: italic small-caps bold 16px/2 cursive;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: none ;
+    view-transition-name: 0.3s;
+  }
+  #product-price {
+    color: #ffffffe0;
+    font: italic small-caps bold 16px/2 cursive;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+  }
+ 
+  /* Optional styles for responsiveness */
+  @media (max-width: 768px) {
+    .modal-content {
+      width: 90%;
+    }
+    #product-image {
+      max-width: 80%;
+    }
+  }
+  
+
+
+/* Contact Section */
+.contact-section {
+  background: url('assets/ganesh.jpg') center/cover no-repeat;
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+   
+}
+
+.contact-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #fff;
+  
+
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.contact-section .btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #0077b6;
+  color: white;
+  
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-section .btn:hover {
+  background-color: #005f99;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer_title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer_text {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.social_icons {
+    margin-top: 10px;
+}
+
+.social_icons a {
+    font-size: 24px;
+    color: #ffcc00;
+    margin: 0 10px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social_icons a:hover {
+    transform: scale(1.2);
+    color: #ff5733;
+}
+
